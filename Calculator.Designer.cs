@@ -41,6 +41,11 @@
             this.button0 = new System.Windows.Forms.Button();
             this.buttonDecimal = new System.Windows.Forms.Button();
             this.BackSpace = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonSign = new System.Windows.Forms.Button();
+            this.buttonSubstract = new System.Windows.Forms.Button();
+            this.buttonMultiply = new System.Windows.Forms.Button();
+            this.buttonDivide = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Display
@@ -164,19 +169,74 @@
             // 
             // BackSpace
             // 
-            this.BackSpace.Location = new System.Drawing.Point(315, 103);
+            this.BackSpace.Location = new System.Drawing.Point(401, 44);
             this.BackSpace.Name = "BackSpace";
-            this.BackSpace.Size = new System.Drawing.Size(80, 80);
+            this.BackSpace.Size = new System.Drawing.Size(80, 53);
             this.BackSpace.TabIndex = 12;
             this.BackSpace.Text = "←";
             this.BackSpace.UseVisualStyleBackColor = true;
             this.BackSpace.Click += new System.EventHandler(this.BackSpace_Click);
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonAdd.Location = new System.Drawing.Point(315, 103);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(80, 80);
+            this.buttonAdd.TabIndex = 13;
+            this.buttonAdd.Text = "+";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            // 
+            // buttonSign
+            // 
+            this.buttonSign.Location = new System.Drawing.Point(57, 361);
+            this.buttonSign.Name = "buttonSign";
+            this.buttonSign.Size = new System.Drawing.Size(80, 80);
+            this.buttonSign.TabIndex = 13;
+            this.buttonSign.Text = "+/-";
+            this.buttonSign.UseVisualStyleBackColor = true;
+            this.buttonSign.Click += new System.EventHandler(this.buttonSign_Click);
+            // 
+            // buttonSubstract
+            // 
+            this.buttonSubstract.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonSubstract.Location = new System.Drawing.Point(315, 275);
+            this.buttonSubstract.Name = "buttonSubstract";
+            this.buttonSubstract.Size = new System.Drawing.Size(80, 80);
+            this.buttonSubstract.TabIndex = 14;
+            this.buttonSubstract.Text = "-";
+            this.buttonSubstract.UseVisualStyleBackColor = true;
+            // 
+            // buttonMultiply
+            // 
+            this.buttonMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonMultiply.Location = new System.Drawing.Point(315, 361);
+            this.buttonMultiply.Name = "buttonMultiply";
+            this.buttonMultiply.Size = new System.Drawing.Size(80, 80);
+            this.buttonMultiply.TabIndex = 15;
+            this.buttonMultiply.Text = "x";
+            this.buttonMultiply.UseVisualStyleBackColor = true;
+            // 
+            // buttonDivide
+            // 
+            this.buttonDivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.buttonDivide.Location = new System.Drawing.Point(315, 189);
+            this.buttonDivide.Name = "buttonDivide";
+            this.buttonDivide.Size = new System.Drawing.Size(80, 80);
+            this.buttonDivide.TabIndex = 16;
+            this.buttonDivide.Text = "/";
+            this.buttonDivide.UseVisualStyleBackColor = true;
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(485, 527);
+            this.Controls.Add(this.buttonDivide);
+            this.Controls.Add(this.buttonMultiply);
+            this.Controls.Add(this.buttonSubstract);
+            this.Controls.Add(this.buttonSign);
+            this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.BackSpace);
             this.Controls.Add(this.buttonDecimal);
             this.Controls.Add(this.button0);
@@ -212,6 +272,11 @@
         private System.Windows.Forms.Button button0;
         private System.Windows.Forms.Button buttonDecimal;
         private System.Windows.Forms.Button BackSpace;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button buttonSign;
+        private System.Windows.Forms.Button buttonSubstract;
+        private System.Windows.Forms.Button buttonMultiply;
+        private System.Windows.Forms.Button buttonDivide;
     }
 }
 

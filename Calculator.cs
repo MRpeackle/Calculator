@@ -21,6 +21,7 @@ namespace Calculator
         private void InitializeCalculator()
         {
             this.BackColor = Color.Turquoise;
+            Display.Text = "0";
 
             string buttonName = null;
             Button button = null;
@@ -36,9 +37,15 @@ namespace Calculator
         private void Button_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            Display.Text += button.Text;
+            if (Display.Text == "0")
+            {
+                Display.Text = button.Text;
+            }
+            else
+            {
+                Display.Text += button.Text;
+            }
         }
-
         private void buttonDecimal_Click(object sender, EventArgs e)
         {
             if (!Display.Text.Contains("."))
@@ -63,10 +70,19 @@ namespace Calculator
             }
             else
             {
-                s = string.Empty;
+                s = "0";
             }
-
+           
             Display.Text = s;
+        }
+
+        private void buttonSign_Click(object sender, EventArgs e)
+        {
+           
+                double number = Convert.ToDouble(Display.Text);
+                number *= -1;
+                Display.Text = number.ToString();
+            
         }
     }
 }
